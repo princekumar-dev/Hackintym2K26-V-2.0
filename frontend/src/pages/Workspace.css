@@ -1,0 +1,382 @@
+.ws {
+  padding-top: var(--sp-base);
+  padding-bottom: var(--sp-xxl);
+}
+
+/* ============================================================
+   Top Breadcrumb & Actions Bar
+   ============================================================ */
+.ws-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-base);
+  max-width: 1200px;
+  margin: 0 auto 14px;
+}
+
+.ws-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--color-muted);
+  flex-wrap: wrap;
+}
+
+.ws-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--color-muted);
+  transition: color 0.15s ease;
+}
+.ws-back:hover {
+  color: var(--color-primary-strong);
+}
+.flip { transform: rotate(180deg); }
+
+.ws-topbar-sep {
+  color: var(--color-hairline);
+  font-size: 12px;
+}
+
+.ws-topbar-pill {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.ws-topbar-title {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.ws-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ws-action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-canvas);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--r-full);
+  padding: 5px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-ink);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.ws-action-pill:hover {
+  background: var(--color-surface-soft);
+  border-color: var(--color-border-strong);
+  transform: translateY(-1px);
+}
+.ws-action-highlight {
+  border-color: rgba(37, 99, 235, 0.3);
+  color: var(--color-primary-strong);
+  background: var(--color-primary-soft);
+}
+
+/* ============================================================
+   Unified Studio Reading Toolbar
+   ============================================================ */
+.ws-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  background: var(--color-canvas);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+  padding: 8px 16px;
+  flex-wrap: wrap;
+}
+
+.wst-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wst-sep {
+  width: 1px;
+  height: 24px;
+  background: var(--color-hairline);
+  flex: none;
+}
+
+.wst-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+/* Segmented Reading Level Switcher */
+.wst-segmented {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--r-full);
+  padding: 2px;
+}
+
+.wst-segment-btn {
+  border: none;
+  background: transparent;
+  padding: 4px 12px;
+  border-radius: var(--r-full);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--color-body);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.wst-segment-btn:hover {
+  color: var(--color-ink);
+}
+.wst-segment-btn.is-active {
+  background: var(--color-canvas);
+  color: var(--color-primary-strong);
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+/* Language selector */
+.wst-select-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--r-sm);
+  padding: 0 24px 0 26px;
+  height: 34px;
+}
+.wst-select-icon {
+  position: absolute;
+  left: 8px;
+  pointer-events: none;
+  color: var(--color-muted);
+}
+.wst-select-arrow {
+  position: absolute;
+  right: 7px;
+  pointer-events: none;
+  color: var(--color-muted);
+}
+.wst-select {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink);
+  cursor: pointer;
+  outline: none;
+}
+
+/* Compare original toggle */
+.wst-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.wst-switch {
+  position: relative;
+  width: 34px;
+  height: 18px;
+  display: inline-block;
+}
+.wst-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.wst-slider {
+  position: absolute;
+  inset: 0;
+  background: var(--color-border-strong);
+  border-radius: 999px;
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+.wst-slider::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+.wst-switch input:checked + .wst-slider {
+  background: var(--color-primary);
+}
+.wst-switch input:checked + .wst-slider::before {
+  transform: translateX(16px);
+}
+
+/* Status Badge on right */
+.wst-status-badge {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-confidence-high-soft);
+  color: var(--color-confidence-high);
+  border: 1px solid rgba(5, 150, 105, 0.2);
+  font-size: 11.5px;
+  font-weight: 600;
+  border-radius: var(--r-full);
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+.wst-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-confidence-high);
+}
+
+/* ============================================================
+   Workspace Two-Column Grid
+   ============================================================ */
+.ws-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ws-main { min-width: 0; }
+
+.reading {
+  background: var(--color-canvas);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+  padding: 32px 36px;
+  min-height: 480px;
+}
+
+/* ============================================================
+   Right Sidebar Rails & Cards
+   ============================================================ */
+.ws-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 88px;
+}
+
+.rail-card {
+  background: var(--color-canvas);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--r-md);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.rail-card:hover {
+  box-shadow: var(--shadow-soft);
+}
+
+.rail-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: 10px;
+}
+
+.rail-note {
+  font-size: 12.5px;
+  color: var(--color-muted);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.rail-btn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* Comprehension check */
+.quiz {
+  margin-top: var(--sp-xl);
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-hairline-soft);
+  border-radius: var(--r-md);
+  padding: var(--sp-lg);
+}
+.quiz-title { font-size: var(--fs-title); font-weight: 700; }
+.quiz-q { margin-top: var(--sp-xs); font-size: var(--fs-body); }
+.quiz-opts { display: flex; flex-direction: column; gap: var(--sp-sm); margin-top: var(--sp-md); }
+.quiz-opt {
+  text-align: left;
+  border: 1px solid var(--color-hairline);
+  background: var(--color-canvas);
+  border-radius: var(--r-sm);
+  padding: var(--sp-md);
+  font-size: var(--fs-body);
+  min-height: 48px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.quiz-opt:hover { border-color: var(--color-ink); background: var(--color-surface-soft); }
+.quiz-opt.ok {
+  border-color: var(--color-confidence-high);
+  background: var(--color-confidence-high-soft);
+  font-weight: 600;
+  color: #065f46;
+}
+.quiz-opt.no {
+  border-color: var(--color-confidence-low);
+  background: var(--color-confidence-low-soft);
+  color: #991b1b;
+}
+.quiz-fb {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-md);
+  margin-top: var(--sp-md);
+  font-size: var(--fs-body-sm);
+  color: var(--color-body);
+  flex-wrap: wrap;
+}
+.quiz-fb.ok { color: var(--color-confidence-high); font-weight: 600; }
+
+@media (max-width: 980px) {
+  .ws-grid { grid-template-columns: 1fr; }
+  .ws-rail { position: static; }
+  .reading { padding: var(--sp-lg); }
+  .wst-status-badge { margin-left: 0; }
+}

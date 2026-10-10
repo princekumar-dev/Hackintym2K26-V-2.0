@@ -1,0 +1,33 @@
+.cc { background: var(--color-surface-soft); border-radius: var(--r-md); padding: var(--sp-lg); margin-top: var(--sp-xl); }
+.cc-head { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-base); margin-bottom: var(--sp-md); }
+.cc-title { display: inline-flex; align-items: center; gap: 8px; font-size: var(--fs-title); font-weight: 700; }
+.cc-score { font-weight: 700; color: var(--color-primary-strong); white-space: nowrap; }
+.cc-qs { display: flex; flex-direction: column; gap: var(--sp-base); }
+.cc-q-text { font-size: var(--fs-body); margin-bottom: var(--sp-sm); display: flex; gap: 8px; align-items: baseline; }
+.cc-q-n {
+  display: inline-flex; width: 22px; height: 22px; flex: none; border-radius: 50%;
+  background: var(--color-primary-soft); color: var(--color-primary-strong);
+  font-size: 12px; font-weight: 700; align-items: center; justify-content: center;
+}
+.cc-opts { display: flex; flex-direction: column; gap: var(--sp-xs); }
+.cc-opt {
+  text-align: left; border: 1px solid var(--color-hairline); background: var(--color-canvas);
+  border-radius: var(--r-sm); padding: 10px var(--sp-md); font-size: var(--fs-body-sm); min-height: 44px;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+.cc-opt:hover:not([disabled]) { border-color: var(--color-ink); }
+.cc-opt.sel { border-color: var(--color-primary); border-width: 2px; background: var(--color-primary-soft); }
+.cc-opt.ok { border-color: var(--color-confidence-high); background: #e6f4ea; font-weight: 600; }
+.cc-opt.no { border-color: var(--color-confidence-low); background: #fdecec; }
+.cc-submit { margin-top: var(--sp-base); }
+.cc-result { margin-top: var(--sp-base); }
+.cc-rtitle { font-size: var(--fs-title); font-weight: 700; }
+.cc-rsub { font-size: var(--fs-body-sm); color: var(--color-muted); margin-bottom: var(--sp-xs); }
+.cc-weak {
+  margin-top: var(--sp-base); background: var(--color-canvas);
+  border: 1px solid var(--color-hairline); border-radius: var(--r-sm); padding: var(--sp-base);
+}
+.cc-weak-title { font-weight: 700; color: var(--color-confidence-low); margin-bottom: var(--sp-xs); }
+.cc-weak-list { display: flex; flex-direction: column; gap: 6px; font-size: var(--fs-body-sm); color: var(--color-body); margin-bottom: var(--sp-md); }
+.cc-weak-actions { display: flex; gap: var(--sp-sm); flex-wrap: wrap; }
+.cc-allgood { display: flex; align-items: center; gap: var(--sp-md); flex-wrap: wrap; margin-top: var(--sp-base); font-weight: 600; color: var(--color-confidence-high); }

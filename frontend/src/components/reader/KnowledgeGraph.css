@@ -1,0 +1,15 @@
+.kg { width: 100%; max-width: 360px; height: auto; display: block; margin: var(--sp-sm) auto; }
+.kg-edge { stroke: var(--color-hairline); stroke-width: 2.5; }
+.kg-edge-strong { stroke: var(--color-confidence-high); }
+.kg-edge-weak { stroke: var(--color-confidence-low); stroke-dasharray: 5 4; }
+.kg-center { fill: var(--color-primary); }
+.kg-center-t { font: 700 13px var(--font-sans); fill: #fff; }
+.kg-center-s { font: 500 9px var(--font-sans); fill: rgba(255, 255, 255, 0.85); }
+.kg-node circle { stroke-width: 2.5; }
+.kg-emoji { font-size: 18px; }
+.kg-label { font: 600 11px var(--font-sans); fill: var(--color-ink); }
+.kg-strong circle { fill: #e6f4ea; stroke: var(--color-confidence-high); }
+.kg-weak circle { fill: #fdecec; stroke: var(--color-confidence-low); animation: kgpulse 1.6s ease-in-out infinite; }
+.kg-weak .kg-label { fill: var(--color-confidence-low); font-weight: 700; }
+.kg-untested circle { fill: var(--color-surface-strong); stroke: var(--color-border-strong); }
+@keyframes kgpulse { 0%, 100% { stroke-opacity: 1; } 50% { stroke-opacity: 0.35; } }

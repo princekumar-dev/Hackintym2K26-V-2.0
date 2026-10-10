@@ -1,0 +1,4 @@
+.teacher { padding-top: var(--sp-xl); }
+.teacher-head { margin-bottom: var(--sp-xl); max-width: 62ch; }
+.teacher-title { font-family: var(--font-display); font-size: 32px; font-weight: 600; letter-spacing: -0.6px; }
+.teacher-sub { color: var(--color-muted); margin-top: var(--sp-sm); font-size: var(--fs-body); }

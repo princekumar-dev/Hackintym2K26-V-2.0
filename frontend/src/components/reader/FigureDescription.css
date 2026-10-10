@@ -1,0 +1,8 @@
+.figdesc-item { background: var(--color-surface-soft); border-radius: var(--r-md); padding: var(--sp-base); }
+.figdesc-head { display: flex; align-items: center; gap: var(--sp-sm); font-weight: 600; }
+.figdesc-alt { font-size: var(--fs-body-sm); color: var(--color-body); line-height: 1.5; margin-top: var(--sp-sm); }
+.figdesc-listen {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: var(--sp-sm);
+  font-weight: 600; font-size: var(--fs-body-sm); color: var(--color-primary-strong);
+}
+.figdesc-listen:hover { text-decoration: underline; }

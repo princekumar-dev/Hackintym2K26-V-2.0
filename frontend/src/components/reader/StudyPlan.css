@@ -1,0 +1,18 @@
+.plan { display: flex; flex-direction: column; gap: var(--sp-sm); }
+.plan-head { display: flex; align-items: center; gap: var(--sp-sm); }
+.plan-count { font-size: var(--fs-body-sm); color: var(--color-muted); white-space: nowrap; }
+.plan-bar { flex: 1; height: 8px; background: var(--color-surface-strong); border-radius: var(--r-full); overflow: hidden; }
+.plan-fill { display: block; height: 100%; background: var(--color-confidence-high); border-radius: var(--r-full); transition: width 0.2s ease; }
+.plan-list { display: flex; flex-direction: column; gap: var(--sp-xs); }
+.plan-item {
+  display: flex; align-items: flex-start; gap: var(--sp-sm); width: 100%; text-align: left;
+  padding: var(--sp-sm); border-radius: var(--r-sm); font-size: var(--fs-body-sm);
+}
+.plan-item:hover { background: var(--color-surface-soft); }
+.plan-check {
+  flex: none; width: 20px; height: 20px; border-radius: var(--r-xs);
+  border: 1.5px solid var(--color-border-strong); display: inline-flex;
+  align-items: center; justify-content: center; color: #fff; margin-top: 1px;
+}
+.plan-done .plan-check { background: var(--color-confidence-high); border-color: var(--color-confidence-high); }
+.plan-done .plan-text { color: var(--color-muted); text-decoration: line-through; }

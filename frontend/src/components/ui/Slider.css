@@ -1,0 +1,19 @@
+.slider { display: flex; flex-direction: column; gap: var(--sp-xs); }
+.slider-label {
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-caption);
+  color: var(--color-muted);
+}
+.slider-input {
+  width: 100%;
+  accent-color: var(--color-primary-strong);
+  height: 28px;
+  cursor: pointer;
+}
+.slider-marks {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-body-sm);
+  color: var(--color-muted);
+}
+.slider-marks .on { color: var(--color-ink); font-weight: 600; }

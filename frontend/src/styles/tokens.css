@@ -1,0 +1,104 @@
+/* ============================================================
+   SahajPath Design Tokens
+   Identity: Vidyā Indigo (Knowledge & Trust) + Diya Amber (Light & Inclusion)
+   Fully WCAG 2.2 AA / AAA Compliant for Accessible Learning
+   ============================================================ */
+:root {
+  /* ---- SahajPath Brand Colors ---- */
+  --color-primary: #2563eb;          /* Vidyā Indigo — primary brand accent */
+  --color-primary-active: #1d4ed8;   /* Active / pressed state */
+  --color-primary-strong: #1e40af;   /* WCAG AAA: high contrast text & CTAs (>7:1) */
+  --color-primary-soft: #eff6ff;     /* Luminous ice-tint surface for badges & active states */
+  --color-primary-disabled: #bfdbfe; /* Disabled CTA state */
+
+  /* Diya Accent (Enlightenment, 🪔 warmth, and key highlights) */
+  --color-accent-amber: #d97706;     /* Diya Amber — focal warmth & highlights */
+  --color-accent-amber-light: #f59e0b;
+  --color-accent-amber-soft: #fef3c7;
+  --color-on-primary: #ffffff;
+
+  /* Semantic Feedback & State */
+  --color-error: #dc2626;
+  --color-error-soft: #fef2f2;
+  --color-luxe: #4338ca;
+
+  /* Neutrals & Surfaces */
+  --color-ink: #0f172a;              /* Slate-900: deep charcoal ink for maximum clarity */
+  --color-body: #334155;             /* Slate-700: comfortable reading color */
+  --color-muted: #64748b;            /* Slate-500: secondary descriptive text */
+  --color-muted-soft: #94a3b8;       /* Slate-400: subtle indicators & timestamps */
+  --color-hairline: #e2e8f0;         /* Slate-200: crisp modern dividers */
+  --color-hairline-soft: #f1f5f9;    /* Slate-100: soft surface boundaries */
+  --color-border-strong: #cbd5e1;    /* Slate-300: active input borders */
+  --color-canvas: #ffffff;           /* Clean white canvas */
+  --color-surface-soft: #f8fafc;     /* Slate-50: comfortable card backing */
+  --color-surface-strong: #f1f5f9;   /* Slate-100: component controls */
+  --color-legal-link: #2563eb;
+  --color-scrim: rgba(15, 23, 42, 0.6);
+
+  /* Confidence Proof-Lens Accents (All AA/AAA on white) */
+  --color-confidence-high: #059669;  /* Emerald: Verified high confidence */
+  --color-confidence-high-soft: #ecfdf5;
+  --color-confidence-med: #b45309;   /* Amber: Moderate confidence review */
+  --color-confidence-med-soft: #fffbeb;
+  --color-confidence-low: #dc2626;   /* Crimson: Low confidence flag */
+  --color-confidence-low-soft: #fef2f2;
+
+  /* ---- Typography ---- */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-dyslexic: 'OpenDyslexic', 'Comic Sans MS', var(--font-sans);
+  --font-hand: 'Kalam', 'Comic Sans MS', cursive;
+  --font-marker: 'Caveat', 'Kalam', cursive;
+
+  /* ---- Type Scale ---- */
+  --fs-display-xl: 30px; --fw-display-xl: 700; --lh-display-xl: 1.2;
+  --fs-display-lg: 24px; --fw-display-lg: 600; --lh-display-lg: 1.25;
+  --fs-display-md: 21px; --fw-display-md: 600; --lh-display-md: 1.3;
+  --fs-display-sm: 18px; --fw-display-sm: 600; --lh-display-sm: 1.35;
+  --fs-title: 16px;      --fw-title: 600;
+  --fs-body: 16px;       --fw-body: 400;       --lh-body: 1.6;
+  --fs-body-sm: 14px;    --lh-body-sm: 1.45;
+  --fs-caption: 13px;    --fw-caption: 500;
+  --fs-badge: 11px;      --fw-badge: 600;
+
+  /* ---- Border Radii ---- */
+  --r-xs: 6px; --r-sm: 10px; --r-md: 16px; --r-lg: 22px; --r-xl: 32px; --r-full: 9999px;
+
+  /* ---- Spacing (4px base) ---- */
+  --sp-xxs: 2px; --sp-xs: 4px; --sp-sm: 8px; --sp-md: 12px; --sp-base: 16px;
+  --sp-lg: 24px; --sp-xl: 32px; --sp-xxl: 48px; --sp-section: 64px;
+
+  /* ---- Elevation & Layering ---- */
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.03), 0 0 0 1px rgba(15, 23, 42, 0.06);
+  --shadow-soft: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 16px 28px -6px rgba(15, 23, 42, 0.07);
+  --shadow-lift: 0 12px 32px -6px rgba(37, 99, 235, 0.16), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+
+  /* ---- Layout ---- */
+  --maxw: 1280px;
+
+  /* ---- Accessibility runtime vars (set by AccessibilityPanel) ---- */
+  --text-scale: 1;
+  --reader-font: var(--font-sans);
+  --reader-letter-spacing: normal;
+  --reader-line-height: 1.7;
+}
+
+/* High-contrast mode */
+:root.contrast-high {
+  --color-ink: #000000;
+  --color-body: #000000;
+  --color-muted: #1e293b;
+  --color-hairline: #000000;
+  --color-primary: #1d4ed8;
+  --color-primary-strong: #002e99;
+  --color-surface-soft: #ffffff;
+  --color-border-strong: #000000;
+}
+
+/* Dyslexia-friendly reading mode */
+:root.font-dyslexic {
+  --reader-font: var(--font-dyslexic);
+  --reader-letter-spacing: 0.06em;
+  --reader-line-height: 2;
+}

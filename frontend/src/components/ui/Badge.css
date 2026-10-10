@@ -1,0 +1,26 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--fs-badge);
+  font-weight: var(--fw-badge);
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+  background: var(--color-surface-strong);
+  color: var(--color-ink);
+}
+.badge-brand {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+.badge-new {
+  background: var(--color-canvas);
+  color: var(--color-primary-strong);
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-size: 11px;
+}
+.badge-success { background: var(--color-confidence-high-soft); color: var(--color-confidence-high); border: 1px solid rgba(5, 150, 105, 0.2); }
+.badge-warn { background: var(--color-confidence-med-soft); color: var(--color-confidence-med); border: 1px solid rgba(180, 83, 9, 0.2); }

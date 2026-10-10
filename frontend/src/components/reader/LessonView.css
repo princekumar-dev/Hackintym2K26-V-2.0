@@ -1,0 +1,48 @@
+.lesson { font-family: var(--reader-font); max-width: 72ch; }
+.lesson-kicker {
+  font-size: var(--fs-caption); font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--color-primary-strong);
+}
+.lesson-h1 {
+  font-family: var(--font-display);
+  font-size: 32px; font-weight: 600; letter-spacing: -0.6px;
+  margin-top: var(--sp-xs); margin-bottom: var(--sp-lg);
+}
+.block { padding: var(--sp-base) 0; border-bottom: 1px solid var(--color-hairline-soft); }
+.block-text {
+  font-size: calc(var(--fs-body) * var(--text-scale));
+  line-height: var(--reader-line-height);
+  letter-spacing: var(--reader-letter-spacing);
+  color: var(--color-ink);
+}
+.word { border-radius: var(--r-xs); padding: 0 1px; }
+.word-click { cursor: pointer; }
+.word-click:hover { background: var(--color-primary-soft); color: var(--color-primary-strong); text-decoration: underline; text-decoration-style: dotted; }
+.word-active { background: #fef08a; box-shadow: 0 0 0 2px #f59e0b; border-radius: 3px; }
+.block-meta { display: flex; align-items: center; gap: var(--sp-base); margin-top: var(--sp-sm); }
+.low-flag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: var(--fs-body-sm); color: var(--color-confidence-low); font-weight: 600;
+}
+.block-low {
+  background: var(--color-confidence-low-soft); border-left: 3px solid var(--color-confidence-low);
+  padding-left: var(--sp-base); margin-left: calc(-1 * var(--sp-base));
+  border-radius: 0 var(--r-xs) var(--r-xs) 0;
+}
+.block-original {
+  margin-top: var(--sp-sm); font-size: var(--fs-body-sm); color: var(--color-muted);
+  background: var(--color-surface-soft); border-radius: var(--r-sm); padding: var(--sp-sm) var(--sp-md);
+}
+.orig-tag { font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 0.4px; margin-right: 6px; }
+
+/* Focus Flow: bionic reading + one-idea carousel */
+.bionic { font-weight: 700; }
+.focus-nav { display: flex; align-items: center; justify-content: center; gap: var(--sp-base); margin-top: var(--sp-lg); }
+.focus-btn {
+  width: 44px; height: 44px; border-radius: var(--r-full); background: var(--color-canvas);
+  box-shadow: inset 0 0 0 1px var(--color-hairline);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.focus-btn:hover:not([disabled]) { background: var(--color-surface-soft); }
+.focus-btn[disabled] { opacity: 0.4; cursor: not-allowed; }
+.focus-count { font-weight: 600; color: var(--color-muted); }

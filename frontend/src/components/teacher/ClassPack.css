@@ -1,0 +1,40 @@
+.classpack { display: grid; gap: var(--sp-lg); }
+.pack-source { display: flex; flex-direction: column; gap: 6px; }
+.pack-title { font-size: var(--fs-display-sm); font-weight: 600; margin-top: var(--sp-xs); }
+.pack-sub { color: var(--color-muted); font-size: var(--fs-body-sm); }
+.pack-arrow {
+  color: var(--color-primary-strong); font-weight: 600;
+  display: inline-flex; align-items: center; gap: 8px; margin-top: var(--sp-sm);
+}
+.pack-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-base); }
+.student-top { display: flex; align-items: center; gap: var(--sp-sm); }
+.avatar {
+  width: 40px; height: 40px; border-radius: var(--r-full);
+  background: linear-gradient(135deg, var(--color-primary-soft) 0%, #ffffff 100%);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  color: var(--color-primary-strong);
+  display: inline-flex; align-items: center; justify-content: center; font-weight: 700;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+.student-name { font-weight: 600; color: var(--color-ink); }
+.student-need { font-size: var(--fs-body-sm); color: var(--color-muted); }
+.student-meta { display: flex; gap: var(--sp-base); margin-top: var(--sp-md); color: var(--color-body); font-size: var(--fs-body-sm); }
+.student-meta span { display: inline-flex; align-items: center; gap: 6px; }
+.student-open {
+  margin-top: var(--sp-md); color: var(--color-primary-strong); font-weight: 600;
+  font-size: var(--fs-body-sm); display: inline-flex; align-items: center; gap: 6px;
+  transition: transform 0.15s ease;
+}
+.student-open:hover { text-decoration: underline; transform: translateX(2px); }
+.struggle-title { font-size: var(--fs-display-sm); font-weight: 600; }
+.struggle-sub { color: var(--color-muted); font-size: var(--fs-body-sm); margin: 2px 0 var(--sp-base); }
+.bars { display: grid; gap: var(--sp-md); }
+.bar-row { display: grid; grid-template-columns: 1.4fr 2fr auto; align-items: center; gap: var(--sp-base); }
+.bar-label { font-size: var(--fs-body-sm); font-weight: 500; color: var(--color-ink); }
+.bar-track { height: 12px; background: var(--color-surface-strong); border-radius: var(--r-full); overflow: hidden; }
+.bar-fill { display: block; height: 100%; background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent-amber) 100%); border-radius: var(--r-full); }
+.bar-pct { font-size: var(--fs-body-sm); color: var(--color-muted); white-space: nowrap; }
+@media (max-width: 860px) {
+  .pack-grid { grid-template-columns: repeat(2, 1fr); }
+  .bar-row { grid-template-columns: 1fr; gap: 4px; }
+}

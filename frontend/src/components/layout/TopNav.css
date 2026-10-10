@@ -1,0 +1,78 @@
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-hairline);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+}
+.topnav-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-base);
+  height: 72px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.4px;
+  color: var(--color-ink);
+  transition: opacity 0.15s ease;
+}
+.brand:hover {
+  opacity: 0.9;
+}
+.brand-orb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1e3a8a 60%, var(--color-accent-amber) 100%);
+  color: #fff;
+  flex: none;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+.topnav-links { display: flex; gap: var(--sp-lg); margin-left: var(--sp-base); }
+.nav-link {
+  font-size: var(--fs-title);
+  font-weight: 600;
+  color: var(--color-muted);
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.nav-link:hover { color: var(--color-primary-strong); }
+.nav-link.active {
+  color: var(--color-primary-strong);
+  border-bottom-color: var(--color-primary-strong);
+}
+.topnav-actions { display: flex; align-items: center; gap: var(--sp-sm); margin-left: auto; }
+.lang-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--r-full);
+  padding: 0 10px;
+  height: 40px;
+  color: var(--color-ink);
+}
+.lang-select select {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--fs-body-sm);
+  color: var(--color-ink);
+  padding: 6px 2px;
+  cursor: pointer;
+}
+@media (max-width: 860px) { .topnav-links { display: none; } }
+@media (max-width: 560px) { .brand-word, .topnav-cta { display: none; } }
